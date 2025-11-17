@@ -1,0 +1,14 @@
+C:\Users\uczen\source\repos\Konsolka\Konsolka\obj\Debug\net8.0\Konsolka.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\uczen\source\repos\Konsolka\Konsolka\obj\Debug\net8.0\Konsolka.AssemblyInfoInputs.cache
+C:\Users\uczen\source\repos\Konsolka\Konsolka\obj\Debug\net8.0\Konsolka.AssemblyInfo.cs
+C:\Users\uczen\source\repos\Konsolka\Konsolka\obj\Debug\net8.0\Konsolka.csproj.CoreCompileInputs.cache
+C:\Users\uczen\source\repos\Konsolka\Konsolka\bin\Debug\net8.0\Konsolka.exe
+C:\Users\uczen\source\repos\Konsolka\Konsolka\bin\Debug\net8.0\Konsolka.deps.json
+C:\Users\uczen\source\repos\Konsolka\Konsolka\bin\Debug\net8.0\Konsolka.runtimeconfig.json
+C:\Users\uczen\source\repos\Konsolka\Konsolka\bin\Debug\net8.0\Konsolka.dll
+C:\Users\uczen\source\repos\Konsolka\Konsolka\bin\Debug\net8.0\Konsolka.pdb
+C:\Users\uczen\source\repos\Konsolka\Konsolka\obj\Debug\net8.0\Konsolka.dll
+C:\Users\uczen\source\repos\Konsolka\Konsolka\obj\Debug\net8.0\refint\Konsolka.dll
+C:\Users\uczen\source\repos\Konsolka\Konsolka\obj\Debug\net8.0\Konsolka.pdb
+C:\Users\uczen\source\repos\Konsolka\Konsolka\obj\Debug\net8.0\Konsolka.genruntimeconfig.cache
+C:\Users\uczen\source\repos\Konsolka\Konsolka\obj\Debug\net8.0\ref\Konsolka.dll
