@@ -1,62 +1,62 @@
-System Rezerwacji Biletów – C#
+# System Rezerwacji Biletów – C#
 
 Prosty konsolowy system do zarządzania wydarzeniami i rezerwacjami miejsc, napisany w C#.
-Projekt umożliwia:
+## Projekt umożliwia:
 
-dodawanie wydarzeń,
+- dodawanie wydarzeń,
 
-rezerwowanie miejsc,
+- rezerwowanie miejsc,
 
-anulowanie rezerwacji,
+- anulowanie rezerwacji,
 
-wyświetlanie listy wydarzeń,
+- wyświetlanie listy wydarzeń,
 
-zapis i odczyt danych z pliku events.txt.
+- zapis i odczyt danych z pliku events.txt.
 
-🔧 Wymagania
+## 🔧 Wymagania
 
 .NET SDK 6.0 lub nowszy
 
 System operacyjny: Windows / Linux / macOS
 
-🚀 Instalacja i uruchomienie
+## 🚀 Instalacja i uruchomienie
 
 Utwórz projekt konsolowy .NET:
 
-dotnet new console -o SystemRezerwacji
+` dotnet new console -o SystemRezerwacji `
 
 
-Skopiuj plik Program.cs z repozytorium do katalogu SystemRezerwacji, nadpisując istniejący plik.
+**Skopiuj plik Program.cs z repozytorium do katalogu SystemRezerwacji, nadpisując istniejący plik.**
 
 Przejdź do katalogu projektu:
 
-cd SystemRezerwacji
+` cd SystemRezerwacji `
 
 
 Uruchom aplikację:
 
-dotnet run
+` dotnet run `
 
-📁 Plik danych
+## 📁 Plik danych
 
 Program automatycznie korzysta z pliku:
 
-events.txt
+***events.txt***
 
 
 Format przechowywania danych o wydarzeniach:
 
-nazwa|yyyy-MM-dd|liczbaMiejsc|zarezerwowane
+` nazwa|yyyy-MM-dd|liczbaMiejsc|zarezerwowane `
 
 
 Przykład:
 
-Koncert Rockowy|2025-12-01|150|45
+` Koncert Rockowy|2025-12-01|150|45 `
 
-📜 Menu programu
+## 📜 Menu programu
 
 Po uruchomieniu aplikacji zobaczysz:
-
+```
 === System rezerwacji biletów ===
 1. Dodaj wydarzenie
 2. Zarezerwuj miejsca
@@ -65,22 +65,22 @@ Po uruchomieniu aplikacji zobaczysz:
 5. Zapisz do pliku
 6. Wczytaj z pliku
 0. Zakończ (zapisz)
+```
 
+**Każda opcja wykonuje odpowiednie operacje na danych.**
 
-Każda opcja wykonuje odpowiednie operacje na danych.
+## 🧩 Struktura projektu
 
-🧩 Struktura projektu
-
-Wydarzenie
+**Wydarzenie**
 Przechowuje informacje o jednym wydarzeniu (nazwa, data, miejsca, rezerwacje).
 
-SystemRezerwacji
+**SystemRezerwacji**
 Zarządza kolekcją wydarzeń, umożliwia wyszukiwanie, zapis i odczyt z pliku.
 
-Program
+**Program**
 Zawiera główną logikę interfejsu konsolowego i obsługę menu.
 
-✔️ Funkcjonalności
+## ✔️ Funkcjonalności
 
 ✔ Dodawanie wydarzeń z walidacją danych
 
@@ -96,7 +96,7 @@ Zawiera główną logikę interfejsu konsolowego i obsługę menu.
 
 ✔ Bezpieczny zapis/odczyt do pliku
 
-🧪 Przykładowe użycie
+## 🧪 Przykładowe użycie
 
 Dodaj wydarzenie:
 
