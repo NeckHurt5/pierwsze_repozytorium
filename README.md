@@ -111,3 +111,112 @@ Zarezerwuj 20 miejsc → wynik: sukces
 Anuluj 5 miejsc → wynik: sukces
 
 Zapisz do events.txt
+
+## 📘 Opis klas w projekcie System Rezerwacji Biletów
+### 🟥 Klasa Wydarzenie
+
+Reprezentuje **pojedyncze wydarzenie**, jego parametry oraz operacje na rezerwacjach.
+
+**Pola / Właściwości**
+
+1. ` string Nazwa – nazwa wydarzenia (np. „Koncert Rockowy”). `
+
+2. ` DateTime Data ` – data wydarzenia.
+
+3. ` int LiczbaMiejsc `– całkowita liczba dostępnych miejsc.
+
+4. ` int Zarezerwowane ` – liczba miejsc aktualnie zarezerwowanych.
+
+5. Właściwości są tylko do odczytu — dane mogą być ustawione wyłącznie w konstruktorze.
+
+### Konstruktor
+` public Wydarzenie(string nazwa, DateTime data, int liczbaMiejsc, int zarezerwowane = 0)  ` 
+
+
+**Odpowiada za:**
+
+- ustawianie wartości pól,
+
+- upewnienie się, że liczba miejsc nie jest ujemna,
+
+- ograniczenie rezerwacji tak, aby nie przekraczała liczby miejsc.
+
+**Metody**
+
+` bool Rezerwuj(int ile) `
+Próbuje zarezerwować ile miejsc.
+Zwraca true, jeśli operacja się udała.
+
+` bool Anuluj(int ile) `
+Anuluje określoną liczbę miejsc — tylko jeśli użytkownik nie próbuje anulować więcej niż jest zarezerwowane.
+
+` int WolneMiejsca() `
+Oblicza liczbę dostępnych jeszcze miejsc.
+
+` override string ToString() `
+Zwraca czytelny opis wydarzenia w konsoli.
+
+` string ToFileLine() `
+Zwraca wydarzenie w formacie tekstowym nadającym się do zapisania w pliku.
+
+` static bool TryParseFromFile(string line, out Wydarzenie wydarzenie) `
+Próbuje odczytać wydarzenie z linii tekstu zapisanej w formacie plikowym.
+
+### 🟦 Klasa SystemRezerwacji
+
+Zawiera listę wszystkich wydarzeń oraz operacje na tej liście.
+
+**Pola**
+
+` List<Wydarzenie> wydarzenia – kolekcja zarządzanych wydarzeń. `
+
+**Metody**
+
+` void DodajWydarzenie(Wydarzenie w) `
+Dodaje nowe wydarzenie do systemu.
+
+` IEnumerable<Wydarzenie> ListaWydarzen() `
+Zwraca wydarzenia posortowane po dacie i nazwie.
+
+` Wydarzenie WyszukajPoNazwie(string nazwa) `
+Wyszukuje wydarzenie na podstawie nazwy (ignorując wielkość liter).
+
+` bool ZapiszDoPliku(string sciezka) `
+Zapisuje wszystkie wydarzenia do pliku tekstowego.
+
+` bool WczytajZPliku(string sciezka) `
+Wczytuje wydarzenia z pliku w zadanym formacie.
+
+***To klasa, która spaja całą logikę i zarządzanie danymi.***
+
+### 🟩 Klasa Program
+
+Odpowiada za **interakcję użytkownika z systemem**: obsługę menu, wczytywanie danych z klawiatury, uruchamianie odpowiednich funkcji.
+
+#### Główne elementy
+` Main() `
+
+- tworzy obiekt SystemRezerwacji,
+
+- automatycznie wczytuje dane z pliku events.txt,
+
+- uruchamia pętlę menu.
+
+#### Funkcje pomocnicze:
+
+` PokazMenu() ` – drukuje menu na ekran.
+
+` DodajWydarzenie(SystemRezerwacji) ` – obsługuje dodawanie nowego wydarzenia z walidacją.
+
+` Rezerwuj(SystemRezerwacji) ` – rezerwacja miejsc na wskazane wydarzenie.
+
+` Anuluj(SystemRezerwacji) ` – anulowanie miejsc.
+
+` WyswietlListe(SystemRezerwacji) ` – wypisuje posortowaną listę wydarzeń.
+
+` Zapisz/System(SystemRezerwacji) ` – zapis do pliku.
+
+` Wczytaj/System(SystemRezerwacji) ` – odczyt z pliku.
+
+***To klasa czysto interfejsu użytkownika — nie trzyma danych biznesowych, a jedynie steruje pracą programu.***
+
